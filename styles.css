@@ -5,25 +5,60 @@
 }
 
 body {
-    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
 }
 
-.container {
+.game-container {
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-    color: #333;
+.game-title {
+    font-size: 3rem;
     margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #ffdf5d;
 }
 
 canvas {
-    background-color: #fff;
-    border: 1px solid #333;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #1e1e1e;
+    border: 3px solid #ffdf5d;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.info {
+    margin-top: 20px;
+}
+
+#score {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.restart-btn {
+    background-color: #ff5d5d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+    background-color: #ff3a3a;
+    transform: translateY(-2px);
 }
