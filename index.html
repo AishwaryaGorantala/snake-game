@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Snake Game</h1>
-        <canvas id="snakeGame" width="400" height="400"></canvas>
+    <div class="game-container">
+        <h1 class="game-title">Snake Game</h1>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="info">
+            <p>Use the arrow keys to control the snake and eat the red apples!</p>
+            <div id="score">Score: 0</div>
+        </div>
+        <button class="restart-btn" onclick="restartGame()">Restart Game</button>
     </div>
     <script src="game.js"></script>
 </body>
