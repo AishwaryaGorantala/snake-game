@@ -1,10 +1,10 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-// Grid size and snake setup
+// Grid size and initial setup
 const gridSize = 20;
 let snake = [{x: 160, y: 160}];
-let direction = {x: 0, y: 0};
+let direction = {x: gridSize, y: 0};  // Set initial movement to the right
 let food = {x: 320, y: 320};
 let score = 0;
 let isGameOver = false;
@@ -42,10 +42,10 @@ function updateGame() {
         document.getElementById('score').textContent = 'Score: ' + score;
         createFood();
     } else {
-        snake.pop();
+        snake.pop(); // Move the snake forward by removing the tail
     }
 
-    snake.unshift(head);
+    snake.unshift(head); // Add new head to the snake
     drawGame();
 }
 
@@ -91,7 +91,7 @@ function endGame() {
 // Restart the game
 function restartGame() {
     snake = [{x: 160, y: 160}];
-    direction = {x: 0, y: 0};
+    direction = {x: gridSize, y: 0}; // Start moving right
     score = 0;
     isGameOver = false;
     document.getElementById('score').textContent = 'Score: 0';
